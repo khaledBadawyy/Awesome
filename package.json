@@ -1,0 +1,14 @@
+{
+  "devDependencies": {
+    "esbuild": "^0.17.19",
+    "tailwindcss": "^3.4.7"
+  },
+  "scripts": {
+    "build-css": "tailwindcss -i ./src/input.css -o ./src/output.css --watch",
+    "build-js": "esbuild src/scripts.js --bundle --outfile=./src/script.js --watch"
+  },
+  "dependencies": {
+    "@alpinejs/mask": "^3.14.1",
+    "alpinejs": "^3.14.1"
+  }
+}

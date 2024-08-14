@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- Tailwind CSS -->
+
+  <!-- Preconnect to Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+  <!-- Google Fonts: Lobster -->
+
+  <!-- Alpine Plugins -->
+  <script defer src="https://cdn.jsdelivr.net/npm/@alpinejs/mask@3.x.x/dist/cdn.min.js"></script>
+
+  <!-- Alpine Core -->
+  <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet" />
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+  <title>Awesome</title>
+  <link rel="stylesheet" href="output.css" />
+  <!-- Favicon -->
+  <link rel="shortcut icon" type="image/png" href="https://img.icons8.com/small/64/ffffff/fire-heart.png"
+    loading="lazy" />
+</head>
+
+<body class="bg-gray-100 ">
+  <div id="modal" class="modal">
+    <div class="modal-content">
+      <h1 id="modal-message"></h1>
+    </div>
+  </div>
+
+  <!-- Header Section -->
+  <header class="header">
+    <div class="d-flex justify-content-between align-items-center h-20">
+      <!-- Logo -->
+      <div class="logo">
+        <a class="d-flex align-items-center gap-1" href="#">
+          <img class="h-8 -mt-1" src="https://img.icons8.com/small/64/ffffff/fire-heart.png" loading="lazy" />
+          <span class="text-lg font-bold">Awesome</span>
+        </a>
+      </div>
+      <!-- Mobile Menu Icon -->
+      <button class="btn btn-primary d-md-none " type="button" data-bs-toggle="offcanvas"
+        data-bs-target="#offcanvasExample" aria-controls="offcanvasExample" style="background: none; border: none;">
+        <img style="    position: absolute;
+        top: 28px;
+        right: 39px;" class="w-6 h-6" src="https://img.icons8.com/small/64/ffffff/menu.png" alt="Menu Icon" />
+      </button>
+
+    </div>
+    <nav x-show="mobilenavOpen" x-cloak class="sidenav md:!block cursor-pointer select-none"
+      @click.outside="mobilenavOpen = false" x-transition:enter="transform transition ease-out duration-300"
+      x-transition:enter-start="-translate-x-full" x-transition:enter-end="translate-x-0"
+      x-transition:leave="transform transition ease-in duration-300" x-transition:leave-start="translate-x-0"
+      x-transition:leave-end="-translate-x-full">
+      <ul class="flex items-center relative navegation flex-col md:flex-row">
+
+
+        <li><a href="">Home</a></li>
+        <li><a href="">Create Post</a></li>
+        <li x-data="{ dropdownOpen: false }" class="relative">
+          <!-- User Dropdown -->
+          <a @click="dropdownOpen = !dropdownOpen" @click.away="dropdownOpen = false"
+            class="cursor-pointer select-none">
+            <img class="h-8 rounded-full object-cover bg-teal-200"
+              src="https://img.icons8.com/doodle/96/null/bart-simpson.png" loading="lazy" />
+            Bart
+            <img x-bind:class="dropdownOpen && 'rotate-180 duration-300'" class="w-4 m-2"
+              src="https://img.icons8.com/small/32/ffffff/expand-arrow.png" loading="lazy" />
+          </a>
+          <div x-show="dropdownOpen" x-cloak
+            class="absolute right-0 bg-white text-black shadow rounded-lg w-40 p-2 z-20"
+            x-transition:enter="duration-300 ease-out" x-transition:enter-start="opacity-0 -translate-y-5 scale-90"
+            x-transition:enter-end="opacity-100 translate-y-0 scale-100">
+            <ul class="hoverlist [&>li>a]:justify-end md:text-black">
+              <li><a href="">My Profile</a></li>
+              <li><a href="">Log Out</a></li>
+            </ul>
+          </div>
+        </li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Sidenav -->
+  <div class="offcanvas offcanvas-start  " tabindex="-1" id="offcanvasExample" style="width: 70%;">
+    <div class="offcanvas-header">
+      <h5 class="offcanvas-title" id="offcanvasExampleLabel"> </h5>
+      <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+    </div>
+    <div class="offcanvas-body">
+      <ul class="list-unstyled m-5 p-5 mt-3 ">
+        <li><a href="#" class="text-decoration-none mt-2">Home</a></li>
+        <li><a href="#" class="text-decoration-none">Create Post</a></li>
+        <li class="dropdown">
+          <a class="dropdown-toggle text-decoration-none" href="#" id="dropdownMenuLink" data-bs-toggle="dropdown"
+            aria-expanded="false">
+            Bart
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+            <li><a class="dropdown-item" href="#">My Profile</a></li>
+            <li><a class="dropdown-item" href="#">Log Out</a></li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- Hero Section -->
+  <section
+    class="hero block bg-gray-700 text-white text-center bg-cover bg-[url('https://live.staticflickr.com/65535/49909538937_3255dcf9e7_b.jpg')]">
+    <div class="col-start-1 row-start-1 bg-gray-800 bg-opacity-40 w-full h-full"></div>
+    <div class="col-start-1 row-start-1 py-24 px-10">
+      <h1 class="titleBlip">Awesome Photo & Captions</h1>
+      <p class="text-lg font-bold mt-2">
+        Share your favorite Photo from flickr and add Great caption
+      </p>
+      <a class="button" style="width: auto">Get started</a>
+    </div>
+  </section>
+
+  <!-- Content Section -->
+  <section x-data="{ mobileSidebarOpen: false }" class="content grid grid-cols-3 max-w-7xl mx-auto mt-8">
+    <!-- Mobile Sidebar Toggle -->
+    <div class="mobileSidebarNav md:hidden col-span-full mx-auto mb-6 z-10 relative flex items-start">
+      <a @click="mobileSidebarOpen = !mobileSidebarOpen"
+        class="flex items-center cursor-pointer select-none font-bold hover:bg-gray-200 rounded-lg p-3">
+        <span>Categories</span>
+        <img x-bind:class="mobileSidebarOpen && 'rotate-180 duration-300'" class="w-4 ml-1.5"
+          src="./img/expand-arrow.png" loading="lazy" />
+      </a>
+    </div>
+
+    <!-- Main Content -->
+    <main class="col-span-full md:col-span-2 mx-[5%] md:mx-[10%] order-2 md:order-1">
+      <!-- Article Card -->
+      <article class="card">
+        <div class="flex items-center justify-between px-4 h-14">
+          <h3 class="text-lg font-bold w-[50%] truncate">Little Jedi</h3>
+          <div class="text-sm text-gray-500">
+            flickr @
+            <a href="#" class="hover:underline" target="_blank">John Doe</a>
+          </div>
+        </div>
+        <figure>
+          <a href="#">
+            <img class="w-full" src="./img/50618365686_36f887ab88_c.jpg" loading="lazy" />
+          </a>
+        </figure>
+        <div class="p-4 pb-2">
+          <a class="flex items-center gap-1 mb-4" href="#">
+            <img class="w-8 h-8 rounded-full" src="./img/happy.png" loading="lazy" />
+            <span class="font-bold hover:underline">Lisa</span>
+          </a>
+          <p class="text-5xl mb-10 px-4 font1">
+            Jedi Kitty protects the street
+          </p>
+          <div class="flex items-center gap-2 text-sm mb-5">
+            <a class="bg-gray-200 rounded-full px-3 py-1 hover:bg-gray-500 hover:text-white" href="#">Animals</a>
+            <a class="bg-gray-200 rounded-full px-3 py-1 hover:bg-gray-500 hover:text-white" href="#">Cute</a>
+          </div>
+          <div class="flex items-center justify-between text-sm px-2">
+            <a class="font-bold hover:underline" href="#">Comments<span
+                class="font-light text-gray-500 ml-2">3</span></a>
+            <div class="flex items-center gap-4 [&>a:hover]:underline">
+              <div class="flex items-center gap-1">
+                <img class="w-5 -mt-1" src="./img/icons8-fire-heart-16.png" loading="lazy" />1
+              </div>
+              <a href="#">Like</a>
+              <a href="#">Edit</a>
+              <a href="#">Delete</a>
+            </div>
+          </div>
+        </div>
+      </article>
+    </main>
+
+    <!-- Sidebar -->
+    <aside x-show="mobileSidebarOpen" x-cloak
+      class="md:!block col-span-full md:col-span-1 mx-[5%] md:ml-[0%] order-1 md:order-2"
+      x-transition:enter="duration-300 ease-out" x-transition:enter-start="opacity-0 -mt-96"
+      x-transition:enter-end="opacity-100 mt-0">
+      <!-- Categories Section -->
+      <section class="card p-6">
+        <h2 class="text-3xl font-bold pl-5">Categories</h2>
+        <ul class="hoverlist">
+          <li class="highlight">
+            <a href="">
+              <img class="w-8 h-8 object-cover mr-2" src="./img/landscape.png" loading="lazy" />
+              <span class="font-bold text-sm">Landscape</span>
+            </a>
+          </li>
+          <li>
+            <a href="">
+              <img class="w-8 h-8 object-cover mr-2" src="./img/portrait.png" loading="lazy" />
+              <span class="font-bold text-sm">People</span>
+            </a>
+          </li>
+          <li>
+            <a href="">
+              <img class="w-8 h-8 object-cover mr-2" src="./img/dog.png" loading="lazy" />
+              <span class="font-bold text-sm">Animals</span>
+            </a>
+          </li>
+          <li>
+            <a href="">
+              <img class="w-8 h-8 object-cover mr-2" src="./img/collage.png" loading="lazy" />
+              <span class="font-bold text-sm">Abstract</span>
+            </a>
+          </li>
+          <li>
+            <a href="">
+              <img class="w-8 h-8 object-cover mr-2" src="./img/180-degrees.png" loading="lazy" />
+              <span class="font-bold text-sm">Black & White</span>
+            </a>
+          </li>
+        </ul>
+      </section>
+      <!-- Top Photo Section -->
+      <section class="card p-4">
+        <h2 class="">Top Photo</h2>
+        <ul class="hoverlist">
+          <li>
+            <a href="">
+              <img class="w-10 h-10 rounded-lg object-cover mr-3" src="./img/50618365686_36f887ab88_c.jpg" alt=""
+                loading="lazy" />
+              <img class="w-6 h-6 rounded-full object-cover mt-0.5" src="./img/happy.png" alt="" loading="lazy" />
+              <span class="font-bold text-sm mr-1">homer</span>
+            </a>
+          </li>
+          <li>
+            <a href="">
+              <img class="w-10 h-10 rounded-lg object-cover mr-3" src="./img/50618365686_36f887ab88_c.jpg" alt=""
+                loading="lazy" />
+              <img class="w-6 h-6 rounded-full object-cover mt-0.5" src="./img/happy.png" alt="" loading="lazy" />
+              <span class="font-bold text-sm mr-1">homer</span>
+            </a>
+          </li>
+        </ul>
+      </section>
+
+      <!-- Top Caption Section -->
+      <section class="card p-4 mt-3 ">
+        <h2 class=" ">Top Caption</h2>
+        <ul class="hoverlist">
+          <li>
+            <a href="">
+              <img class="w-6 h-8 rounded-full object-cover mr-1 ml-3" src="./img/happy.png" alt="" loading="lazy" />
+              <span class="font-bold text-sm mr-1">homer (5 likes)</span>
+            </a>
+          </li>
+        </ul>
+      </section>
+    </aside>
+  </section>
+  <section>
+
+
+    <div class="row">
+      <div class="col-75">
+        <div class="container">
+          <form>
+
+            <div class="row">
+              <div class="col-50 bullid-body">
+                <h3>Billing Address</h3>
+                <label for="fname"><i class="fa fa-user"></i> Full Name</label>
+                <input type="text" id="fname" name="firstname" placeholder="John M. Doe">
+                <label for="email"><i class="fa fa-envelope"></i> Email</label>
+                <input type="text" id="email" name="email" placeholder="john@example.com">
+                <label for="adr"><i class="fa fa-address-card-o"></i> Address</label>
+                <input type="text" id="adr" name="address" placeholder="542 W. 15th Street">
+                <label for="city"><i class="fa fa-institution"></i> City</label>
+                <input type="text" id="city" name="city" placeholder="New York">
+
+
+                <div class="row">
+                  <div class="col-6 cvv-exp">
+                    <label for="expYear" class="label-EXP">State</label>
+                    <input type="text" id="expYear" class="form-control input-EXP " name="State" placeholder="NY">
+                  </div>
+                  <div class="col-6">
+                    <label for="Zip">Zip</label>
+                    <input class="change-cvv-zip" x-mask="99999" type="text" id="zip" name="zip" placeholder="10001">
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-50">
+                <h3>Payment</h3>
+                <label for="fname">Accepted Cards</label>
+                <div class="icon-container">
+                  <i class="fa fa-cc-visa" style="color:navy;"></i>
+                  <i class="fa fa-cc-amex" style="color:blue;"></i>
+                  <i class="fa fa-cc-mastercard" style="color:red;"></i>
+                  <i class="fa fa-cc-discover" style="color:orange;"></i>
+                </div>
+                <label for="cname">Name on Card</label>
+                <input type="text" id="cname" name="cardname" placeholder="John More Doe">
+                <label for="ccnum">Credit card number</label>
+                <div x-data>
+                  <input x-mask="9999 9999 9999 9999" type="text" id="ccnum" name="cardnumber"
+                    placeholder="1111-2222-3333-4444">
+                </div>
+                <label for="expmonth">Exp Month</label>
+                <input type="text" id="expmonth" name="expmonth" placeholder="September">
+                <div class="row">
+                  <div class="col-6 cvv-exp">
+                    <label for="expYear" class="label-EXP">Exp Year</label>
+                    <input type="text" id="expYear" class="form-control input-EXP" placeholder="YY">
+                  </div>
+                  <div class="col-6">
+                    <label for="cvv">CVV</label>
+                    <input type="text" id="cvv" class="form-control change-cvv-zip" placeholder="CVV">
+                  </div>
+                </div>
+
+              </div>
+
+            </div>
+            <label>
+              <input type="checkbox" checked="checked" name="sameadr"> Shipping address same as billing
+            </label>
+            <input type="submit" value="Continue to checkout" class="btn">
+          </form>
+        </div>
+      </div>
+      <div class="col-25">
+        <div class="container">
+          <h4>Cart <span class="price" style="color:black"><i class="fa fa-shopping-cart"></i> <b>4</b></span></h4>
+          <p><a href="#">Product 1</a> <span class="price">$15</span></p>
+          <p><a href="#">Product 2</a> <span class="price">$5</span></p>
+          <p><a href="#">Product 3</a> <span class="price">$8</span></p>
+          <p><a href="#">Product 4</a> <span class="price">$2</span></p>
+          <hr>
+          <p>Total <span class="price" style="color:black"><b>$30</b></span></p>
+        </div>
+      </div>
+    </div>
+
+
+  </section>
+
+
+  <script>
+    function internetConnection() {
+      return {
+        isOnline: navigator.onLine,
+        init() {
+          this.checkConnection();
+          window.addEventListener("online", () => this.checkConnection());
+          window.addEventListener("offline", () => this.checkConnection());
+        },
+        checkConnection() {
+          this.isOnline = navigator.onLine;
+          document.getElementById("modal").style.display = this.isOnline
+            ? "none"
+            : "flex";
+          document.getElementById("modal-message").textContent = this.isOnline
+            ? ""
+            : "You are offline. Please check your internet connection.";
+        },
+      };
+    }
+    window.onload = () => {
+      const connection = internetConnection();
+      connection.init();
+    };
+  </script>
+  <script>
+    function openNav() {
+      document.getElementById("mySidenav").style.width = "250px";
+    }
+
+    function closeNav() {
+      document.getElementById("mySidenav").style.width = "0";
+    }
+  </script>
+
+  <!-- Custom Script -->
+  <script async src="script.js" type="module"></script>
+</body>
+
+</html>
