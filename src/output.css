@@ -15,6 +15,7 @@ body {
 body {
   overflow-x: hidden;
 }
+
 /* hhhh */
 /* لضبط المسافة بين الأعمدة */
 @media (max-width: 768px) {
@@ -38,6 +39,17 @@ body {
     position: relative;
     left: 5px;
   }
+  .check-submit {
+    position: relative;
+    bottom: 180px;
+  }
+  .bullid-body {
+    margin-bottom: -170px;
+  }
+  .logo-awesome {
+    position: relative;
+    left: 210px;
+  }
 }
 
 /* لضبط ارتفاع العناصر في حالة وجود أي تعارض */
@@ -48,9 +60,9 @@ body {
 .offcanvas-body {
   display: flex;
   flex-direction: column;
-  justify-content: top;
+  justify-content: center;
   align-items: center;
-  height: 50%;
+  height: 100%;
 }
 .offcanvas-backdrop {
   background-color: transparent !important;
