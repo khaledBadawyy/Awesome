@@ -23,7 +23,7 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 
   <title>Awesome</title>
-  <link rel="stylesheet" href="output.css" />
+  <link rel="stylesheet" href="./src/output.css" />
   <!-- Favicon -->
   <link rel="shortcut icon" type="image/png" href="https://img.icons8.com/small/64/ffffff/fire-heart.png"
     loading="lazy" />
@@ -137,7 +137,7 @@
         class="flex items-center cursor-pointer select-none font-bold hover:bg-gray-200 rounded-lg p-3">
         <span>Categories</span>
         <img x-bind:class="mobileSidebarOpen && 'rotate-180 duration-300'" class="w-4 ml-1.5"
-          src="./img/expand-arrow.png" loading="lazy" />
+          src="./src/img/expand-arrow.png" loading="lazy" />
       </a>
     </div>
 
@@ -154,12 +154,12 @@
         </div>
         <figure>
           <a href="#">
-            <img class="w-full" src="./img/50618365686_36f887ab88_c.jpg" loading="lazy" />
+            <img class="w-full" src="./src/img/50618365686_36f887ab88_c.jpg" loading="lazy" />
           </a>
         </figure>
         <div class="p-4 pb-2">
           <a class="flex items-center gap-1 mb-4" href="#">
-            <img class="w-8 h-8 rounded-full" src="./img/happy.png" loading="lazy" />
+            <img class="w-8 h-8 rounded-full" src="./src/img/happy.png" loading="lazy" />
             <span class="font-bold hover:underline">Lisa</span>
           </a>
           <p class="text-5xl mb-10 px-4 font1">
@@ -174,7 +174,7 @@
                 class="font-light text-gray-500 ml-2">3</span></a>
             <div class="flex items-center gap-4 [&>a:hover]:underline">
               <div class="flex items-center gap-1">
-                <img class="w-5 -mt-1" src="./img/icons8-fire-heart-16.png" loading="lazy" />1
+                <img class="w-5 -mt-1" src="./src/img/icons8-fire-heart-16.png" loading="lazy" />1
               </div>
               <a href="#">Like</a>
               <a href="#">Edit</a>
@@ -196,31 +196,31 @@
         <ul class="hoverlist">
           <li class="highlight">
             <a href="">
-              <img class="w-8 h-8 object-cover mr-2" src="./img/landscape.png" loading="lazy" />
+              <img class="w-8 h-8 object-cover mr-2" src="./src/img/landscape.png" loading="lazy" />
               <span class="font-bold text-sm">Landscape</span>
             </a>
           </li>
           <li>
             <a href="">
-              <img class="w-8 h-8 object-cover mr-2" src="./img/portrait.png" loading="lazy" />
+              <img class="w-8 h-8 object-cover mr-2" src="./src/img/portrait.png" loading="lazy" />
               <span class="font-bold text-sm">People</span>
             </a>
           </li>
           <li>
             <a href="">
-              <img class="w-8 h-8 object-cover mr-2" src="./img/dog.png" loading="lazy" />
+              <img class="w-8 h-8 object-cover mr-2" src="./src/img/dog.png" loading="lazy" />
               <span class="font-bold text-sm">Animals</span>
             </a>
           </li>
           <li>
             <a href="">
-              <img class="w-8 h-8 object-cover mr-2" src="./img/collage.png" loading="lazy" />
+              <img class="w-8 h-8 object-cover mr-2" src="./src/img/collage.png" loading="lazy" />
               <span class="font-bold text-sm">Abstract</span>
             </a>
           </li>
           <li>
             <a href="">
-              <img class="w-8 h-8 object-cover mr-2" src="./img/180-degrees.png" loading="lazy" />
+              <img class="w-8 h-8 object-cover mr-2" src="./src/img/180-degrees.png" loading="lazy" />
               <span class="font-bold text-sm">Black & White</span>
             </a>
           </li>
@@ -232,17 +232,17 @@
         <ul class="hoverlist">
           <li>
             <a href="">
-              <img class="w-10 h-10 rounded-lg object-cover mr-3" src="./img/50618365686_36f887ab88_c.jpg" alt=""
+              <img class="w-10 h-10 rounded-lg object-cover mr-3" src="./src/img/50618365686_36f887ab88_c.jpg" alt=""
                 loading="lazy" />
-              <img class="w-6 h-6 rounded-full object-cover mt-0.5" src="./img/happy.png" alt="" loading="lazy" />
+              <img class="w-6 h-6 rounded-full object-cover mt-0.5" src="./src/img/happy.png" alt="" loading="lazy" />
               <span class="font-bold text-sm mr-1">homer</span>
             </a>
           </li>
           <li>
             <a href="">
-              <img class="w-10 h-10 rounded-lg object-cover mr-3" src="./img/50618365686_36f887ab88_c.jpg" alt=""
+              <img class="w-10 h-10 rounded-lg object-cover mr-3" src="./src/img/50618365686_36f887ab88_c.jpg" alt=""
                 loading="lazy" />
-              <img class="w-6 h-6 rounded-full object-cover mt-0.5" src="./img/happy.png" alt="" loading="lazy" />
+              <img class="w-6 h-6 rounded-full object-cover mt-0.5" src="./src/img/happy.png" alt="" loading="lazy" />
               <span class="font-bold text-sm mr-1">homer</span>
             </a>
           </li>
@@ -255,7 +255,8 @@
         <ul class="hoverlist">
           <li>
             <a href="">
-              <img class="w-6 h-8 rounded-full object-cover mr-1 ml-3" src="./img/happy.png" alt="" loading="lazy" />
+              <img class="w-6 h-8 rounded-full object-cover mr-1 ml-3" src="./src/img/happy.png" alt=""
+                loading="lazy" />
               <span class="font-bold text-sm mr-1">homer (5 likes)</span>
             </a>
           </li>
@@ -390,7 +391,8 @@
       };
     </script>
     <!-- Custom Script -->
-    <script async src="script.js" type="module"></script>
+    <script async src="./src/script.js" type="module"></script>
+
 </body>
 
 </html>

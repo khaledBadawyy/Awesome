@@ -80,6 +80,34 @@ body {
   width: 100%;
   text-align: left;
 }
+@media (max-width: 768px) {
+  .modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.5);
+    justify-content: center;
+    z-index: 1000;
+    align-items: flex-start;
+  }
+  .modal-content {
+    background-color: #fefefe;
+    position: relative;
+    width: 400px;
+    top: 182px;
+    border: 1px solid #888;
+    border-radius: 0.25rem;
+  }
+  .modal-content h1 {
+    font-size: small;
+    font-family: normal;
+    text-align: center;
+    margin-top: 40px;
+  }
+}
 
 .modal {
   display: none;
@@ -97,6 +125,8 @@ body {
 }
 
 .modal-content {
+  font-family: normal !important;
+
   background-color: #fefefe;
   margin: 15% auto;
   padding: 20px;
