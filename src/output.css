@@ -16,6 +16,41 @@ body {
   overflow-x: hidden;
 }
 
+body {
+  margin-right: 0;
+  padding-right: 0;
+}
+
+.modal-popup {
+  margin-right: 0;
+}
+
+.my-button {
+  margin-right: 0;
+}
+.container {
+  margin-left: auto;
+  margin-right: auto;
+}
+@media (max-width: 768px) {
+  .some-class {
+    margin-right: 0;
+  }
+}
+
+@media (max-width: 768px) {
+  .swiper-button-next:after {
+    font-size: 22px;
+  }
+  .swiper-button-prev:after {
+    font-size: 22px;
+  }
+  main {
+    position: relative;
+    bottom: 55px;
+  }
+}
+
 .modal-popup {
   position: fixed;
   z-index: 1;
@@ -43,9 +78,28 @@ body {
 .my-button {
   position: absolute;
   z-index: 1;
-  top: 152%;
+  top: 150%;
   left: 50%;
   transform: translate(-50%, -50%);
+}
+
+@media (max-width: 768px) {
+  .h-g-word {
+    position: absolute;
+    z-index: 1;
+    top: 120%;
+    left: 40%;
+    transform: translate(-50%, -50%);
+  }
+}
+
+@media (max-width: 768px) {
+  .my-button {
+    width: auto;
+    font-size: 10px;
+    position: absolute;
+    bottom: 0px;
+  }
 }
 
 /* hhhh */
@@ -60,7 +114,7 @@ body {
   .input-EXP {
     position: relative;
     bottom: 104px;
-    left: 188px;
+    left: 165px;
   }
 
   .bullid-body {
@@ -69,7 +123,7 @@ body {
   }
   .change-cvv-zip {
     position: relative;
-    left: 5px;
+    left: -10px;
   }
   .check-submit {
     position: relative;
@@ -181,7 +235,7 @@ body {
   display: flex;
   -ms-flex-wrap: wrap; /* IE10 */
   flex-wrap: wrap;
-  margin: 0 -16px;
+  margin: 0;
 }
 
 .col-25 {
