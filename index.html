@@ -22,6 +22,8 @@
 
   <!-- Swiper CSS -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css">
+  <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
 
   <title>Awesome</title>
   <link rel="stylesheet" href="./src/output.css" />
@@ -141,7 +143,7 @@
     </div>
     <!-- Overlay Text -->
     <div class="hero block text-white text-center h-g-word  ">
-      <div class=" absolute col-start-1 row-start-1 *: bg-opacity-40 w-full h-full">
+      <div class=" absolute col-start-1 row-start-1 *: bg-opacity-40 w-full " style="height: 0;">
         <div class="col-start-1 row-start-1 py-24 px-10" style="    position: relative;
         top: -421px;
     ">
@@ -187,14 +189,140 @@
 
         </div>
       </div>
-  </section>
+  </section>`
+  <!-- swiper -->
+  <div class="logo-slider-wrapper mt-5" style="height: auto;">
+    <div class="logo-slider" style=" overflow: hidden;
+  position: relative;">
+      <!-- Additional required wrapper -->
+      <div class="swiper-wrapper" style=" width: 200px !important; ">
+        <!-- Slides -->
+        <a href="#" class="swiper-slide ">
+          <img src="src/img/swiper/abacus.png " alt="" style=" border-radius: 40px;
+          width: 80px;
+          height: 80px;">
+        </a>
+        <a href="#" class="swiper-slide">
+          <img src="src/img/swiper/astronomy.png " alt="" style=" border-radius: 40px;
+          width: 80px;
+          height: 80px;">
+        </a>
+        <a href="#" class="swiper-slide">
+          <img src="src/img/swiper/bakery.png " alt="" style=" border-radius: 40px;
+          width: 80px;
+          height: 80px;">
+        </a>
+        <a href="#" class="swiper-slide">
+          <img src="src/img/swiper/bell.png " alt="" style=" border-radius: 40px;
+          width: 80px;
+          height: 80px;">
+        </a>
+        <a href="#" class="swiper-slide">
+          <img src="src/img/swiper/biology.png " alt="" style=" border-radius: 40px;
+          width: 80px;
+          height: 80px;">
+        </a>
+        <a href="#" class="swiper-slide">
+          <img src="src/img/swiper/blackboard.png " alt="" style=" border-radius: 40px;
+          width: 80px;
+          height: 80px;">
+        </a>
+        <a href="#" class="swiper-slide">
+          <img src="src/img/swiper/chemistry.png " alt="" style=" border-radius: 40px;
+          width: 80px;
+          height: 80px;">
+        </a>
+        <a href="#" class="swiper-slide">
+          <img src="src/img/swiper/crayon.png " alt="" style=" border-radius: 40px;
+          width: 80px;
+          height: 80px;">
+        </a>
+        <a href="#" class="swiper-slide">
+          <img src="src/img/swiper/earth.png " alt="" style=" border-radius: 40px;
+          width: 80px;
+          height: 80px;">
+        </a>
+        <a href="#" class="swiper-slide">
+          <img src="src/img/swiper/geology.png " alt="" style=" border-radius: 40px;
+          width: 80px;
+          height: 80px;">
+        </a>
+        <a href="#" class="swiper-slide">
+          <img src="src/img/swiper/geometry.png " alt="" style=" border-radius: 40px;
+          width: 80px;
+          height: 80px;">
+        </a>
+        <a href="#" class="swiper-slide">
+          <img src="src/img/swiper/grammar.png " alt="" style=" border-radius: 40px;
+          width: 80px;
+          height: 80px;">
+        </a>
+        <a href="#" class="swiper-slide">
+          <img src="src/img/swiper/homework.png " alt="" style=" border-radius: 40px;
+          width: 80px;
+          height: 80px;">
+        </a>
+        <a href="#" class="swiper-slide">
+          <img src="src/img/swiper/laptop.png  " alt="" style=" border-radius: 40px;
+          width: 80px;
+          height: 80px;">
+        </a>
+        <a href="#" class="swiper-slide">
+          <img src="src/img/swiper/music.png " alt="" style=" border-radius: 40px;
+          width: 80px;
+          height: 80px;">
+        </a>
+        <a href="#" class="swiper-slide">
+          <img src="src/img/swiper/notebook.png " alt="" style=" border-radius: 40px;
+          width: 80px;
+          height: 80px;">
+        </a>
+        <a href="#" class="swiper-slide">
+          <img src="src/img/swiper/pencil.png  " alt="" style=" border-radius: 40px;
+          width: 80px;
+          height: 80px;">
+        </a>
+        <a href="#" class="swiper-slide">
+          <img src="src/img/swiper/physical-education.png " alt="" style=" border-radius: 40px;
+          width: 80px;
+          height: 80px;">
+        </a>
+        <a href="#" class="swiper-slide">
+          <img src="src/img/swiper/physics.png " alt="" style=" border-radius: 40px;
+          width: 80px;
+          height: 80px;">
+        </a>
+        <a href="#" class="swiper-slide">
+          <img src="src/img/swiper/projector.png " alt="" style=" border-radius: 40px;
+          width: 80px;
+          height: 80px;">
+        </a>
+        <a href="#" class="swiper-slide">
+          <img src="src/img/swiper/ruler.png " alt="" style=" border-radius: 40px;
+          width: 80px;
+          height: 80px;">
+        </a>
+        <a href="#" class="swiper-slide">
+          <img src="src/img/swiper/smartphone.png " alt="" style=" border-radius: 40px;
+          width: 80px;
+          height: 80px;">
+        </a>
+
+
+      </div>
+
+      <!-- Add Pagination -->
+
+    </div>
+  </div>
 
   <!-- Content Section -->
   <section x-data="{ mobileSidebarOpen: false }" class="  content grid grid-cols-3 max-w-7xl mx-auto mt-8">
     <!-- Mobile Sidebar Toggle -->
     <div class="mobileSidebarNav md:hidden col-span-full mx-auto mb-6 z-10 relative flex items-start">
-      <a @click="mobileSidebarOpen = !mobileSidebarOpen" style="position: relative; top: 0px;"
-        class="flex items-center cursor-pointer select-none font-bold hover:bg-gray-200 rounded-lg p-3  ">
+      <a @click="mobileSidebarOpen = !mobileSidebarOpen"
+        class="flex items-center cursor-pointer select-none font-bold  hover:bg-gray-200 rounded-lg p-3 pt-6" style="position: relative;
+    top: 78px;">
         <span>Categories</span>
         <img x-bind:class="mobileSidebarOpen && 'rotate-180 duration-300'" class="w-4 ml-1.5"
           src="./src/img/expand-arrow.png" loading="lazy" />

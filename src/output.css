@@ -47,7 +47,7 @@ body {
   }
   main {
     position: relative;
-    bottom: 74px;
+    bottom: 30px;
   }
 }
 
@@ -979,7 +979,7 @@ video {
 }
 
 .mb-6 {
-  margin-bottom: 1.5rem;
+  margin-bottom: 2.5rem;
 }
 
 .ml-1\.5 {
@@ -1027,7 +1027,7 @@ video {
 }
 
 .mt-8 {
-  margin-top: 2rem;
+  margin-top: -3rem;
 }
 
 .block {

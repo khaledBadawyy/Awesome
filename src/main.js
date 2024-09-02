@@ -22,7 +22,7 @@ window.onload = () => {
   connection.init();
 };
 
-const swiper = new Swiper(".swiper", {
+let swiper = new Swiper(".swiper", {
   loop: true,
   pagination: {
     el: ".swiper-pagination",
@@ -31,5 +31,25 @@ const swiper = new Swiper(".swiper", {
   navigation: {
     nextEl: ".swiper-button-next",
     prevEl: ".swiper-button-prev",
+  },
+});
+
+swiper = new Swiper(".logo-slider", {
+  slidesPerView: 3,
+  loop: true,
+  spaceBetween: 0,
+  breakpoints: {
+    480: {
+      slidesPerView: 4,
+    },
+    768: {
+      slidesPerView: 5,
+    },
+    992: {
+      slidesPerView: 6,
+    },
+    1200: {
+      slidesPerView: 8,
+    },
   },
 });
